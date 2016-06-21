@@ -17,7 +17,8 @@ const Transformer = require('panto-transformer');
 class ReadTransformer extends Transformer {
     _transform(file) {
         const {
-            filename
+            filename,
+            content
         } = file;
         // use cache if possible
         if (!panto.util.isUndefined(content)) {
