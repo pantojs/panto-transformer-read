@@ -1,37 +1,35 @@
 /**
-  * Copyright (C) 2016 pentojs.xyz
-  * index.js
-  *
-  * changelog
-  * 2016-06-21[23:20:27]:revised
-  *
-  * @author yanni4night@gmail.com
-  * @version 1.0.0
-  * @since 1.0.0
-  */
+ * Copyright (C) 2016 pentojs.xyz
+ * read-transformer.js
+ *
+ * changelog
+ * 2016-06-21[22:03:55]:revised
+ *
+ * @author yanni4night@gmail.com
+ * @version 0.1.0
+ * @since 0.1.0
+ */
+
 'use strict';
-const extend = require('lodash/extend');
-const isPlainObject = require('lodash/isPlainObject');
-const isNil = require('lodash/isNil');
 
-class Transformer {
-    constructor(opt) {
-        if (!isNil(opt) && !isPlainObject(opt)) {
-            throw new Error(`A PLAIN OBJECT is required to construct a transformer`);
-        }
-        this.options = extend({}, opt);
-    }
-    transform(file) {
+const Transformer = require('panto-transformer');
 
-        if (isNil(file) || true === this.options.isSkip) {
-            return Promise.resolve([]);
-        }
-
-        return this._transform(file);
-    }
+class ReadTransformer extends Transformer {
     _transform(file) {
-        return Promise.resolve(file);
+        const {
+            filename
+        } = file;
+        // use cache if possible
+        if (!panto.util.isUndefined(content)) {
+            return Promise.resolve(file);
+        } else {
+            return panto.file.read(filename).then(content => {
+                return panto.util.extend(file, {
+                    content
+                });
+            });
+        }
     }
 }
 
-module.exports = Transformer;
+module.exports = ReadTransformer;

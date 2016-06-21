@@ -1,6 +1,6 @@
 {
   "name": "panto-transformer-read",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Read transformer for panto",
   "main": "index.js",
   "scripts": {
@@ -15,6 +15,9 @@
     "read",
     "transformer"
   ],
+  "engines": {
+    "node": ">=6.0.0"
+  },
   "author": "yanni4night@gmail.com",
   "license": "Apache-2.0",
   "bugs": {
@@ -22,7 +25,7 @@
   },
   "homepage": "https://github.com/pantojs/panto-transformer-read",
   "dependencies": {
-    "lodash": "^4.13.1"
+    "panto-transformer": "^0.1.0"
   },
   "devDependencies": {
     "eslint": "^2.13.1"
