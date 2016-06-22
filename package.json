@@ -1,6 +1,6 @@
 {
   "name": "panto-transformer-read",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Read transformer for panto",
   "main": "index.js",
   "scripts": {
