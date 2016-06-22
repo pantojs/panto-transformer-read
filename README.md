@@ -5,9 +5,9 @@
 Read transformer for panto.
 
 ```js
-panto.loadPlugin('read');
+panto.loadTransformer('read');
 
-panto.pick('**/*.js').(panto.read()).end();
+panto.pick('**/*.js').pipe(panto.read()).end();
 ```
 
 [npm-url]: https://npmjs.org/package/panto-transformer-read
