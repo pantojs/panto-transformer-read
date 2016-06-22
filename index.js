@@ -6,10 +6,9 @@
  * 2016-06-21[22:03:55]:revised
  *
  * @author yanni4night@gmail.com
- * @version 0.1.0
+ * @version 0.3.0
  * @since 0.1.0
  */
-
 'use strict';
 
 const Transformer = require('panto-transformer');
@@ -21,7 +20,7 @@ class ReadTransformer extends Transformer {
             content
         } = file;
         // use cache if possible
-        if (!panto.util.isUndefined(content)) {
+        if (!panto.util.isNil(content)) {
             return Promise.resolve(file);
         } else {
             return panto.file.read(filename).then(content => {

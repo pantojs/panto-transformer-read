@@ -1,6 +1,6 @@
 {
   "name": "panto-transformer-read",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "description": "Read transformer for panto",
   "main": "index.js",
   "scripts": {
@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/pantojs/panto-transformer-read",
   "dependencies": {
-    "panto-transformer": "^0.1.0"
+    "panto-transformer": "^0.1.1"
   },
   "devDependencies": {
     "eslint": "^2.13.1"
