@@ -1,6 +1,6 @@
 # panto-transformer-read
 
-[![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Dependency status][david-dm-image]][david-dm-url] [![Dev Dependency status][david-dm-dev-image]][david-dm-dev-url]
+[![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency status][david-dm-image]][david-dm-url] [![Dev Dependency status][david-dm-dev-image]][david-dm-dev-url]
 
 Read transformer for panto.
 
@@ -13,6 +13,8 @@ panto.pick('**/*.js').pipe(panto.read()).end();
 [npm-url]: https://npmjs.org/package/panto-transformer-read
 [downloads-image]: http://img.shields.io/npm/dm/panto-transformer-read.svg
 [npm-image]: http://img.shields.io/npm/v/panto-transformer-read.svg
+[travis-url]: https://travis-ci.org/pantojs/panto-transformer-read
+[travis-image]: http://img.shields.io/travis/pantojs/panto-transformer-read.svg
 [david-dm-url]:https://david-dm.org/pantojs/panto-transformer-read
 [david-dm-image]:https://david-dm.org/pantojs/panto-transformer-read.svg
 [david-dm-dev-url]:https://david-dm.org/pantojs/panto-transformer-read#info=devDependencies
