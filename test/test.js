@@ -4,10 +4,11 @@
  *
  * changelog
  * 2016-06-24[10:35:29]:revised
+ * 2016-07-01[00:27:58]:buffer
  *
  * @author yanni4night@gmail.com
- * @version 1.0.0
- * @since 1.0.0
+ * @version 0.3.2
+ * @since 0.1.0
  */
 'use strict';
 const assert = require('assert');
@@ -26,7 +27,7 @@ describe('panto-transformer-read', () => {
                 done();
             }).catch(console.error.bind(console));
         });
-        it('should get content', done => {
+        it('should get text content', done => {
             const file = {
                 filename: 'test.js'
             };
@@ -35,8 +36,21 @@ describe('panto-transformer-read', () => {
             });
             new ReadTransformer().transform(file).then(tfile => {
                 assert.ok(!!tfile.content);
-                done();
-            }).catch(console.error.bind(console));
+
+            }).then(() => done());
+        });
+        it('should get buffer content', done => {
+            const file = {
+                filename: 'npm-57x57.png'
+            };
+            panto.setOptions({
+                cwd: __dirname
+            });
+            new ReadTransformer().transform(file).then(tfile => {
+                assert.ok(!!tfile.content);
+                assert.ok(tfile.content instanceof Buffer);
+
+            }).then(() => done());
         });
     });
 });
