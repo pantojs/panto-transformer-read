@@ -4,6 +4,7 @@
  *
  * changelog
  * 2016-06-21[22:03:55]:revised
+ * 2016-07-30[14:33:01]:isCacheable
  *
  * @author yanni4night@gmail.com
  * @version 0.3.2
@@ -29,6 +30,9 @@ class ReadTransformer extends Transformer {
                 });
             });
         }
+    }
+    isCacheable() {
+        return false;
     }
 }
 
